@@ -93,7 +93,7 @@ int main()
 
 	
 	Date a(01, 01, 2000);
-	Date b = a+39;
+	Date b = a+30;
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 }

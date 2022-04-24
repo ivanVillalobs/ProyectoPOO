@@ -18,12 +18,6 @@ public:
 	//operador para sumar dias
 	Date operator +(int daysToAdd) {
 		Date newDate(month, day + daysToAdd, year);
-		int a,b, c;
-			daysToAdd = a;
-			if (a>=59 && a<=1){
-				c = 31 - a;
-			}
-		Date newDate(month+1, day + c, year);
 		return newDate;
 	}
 	//operador para restar dias
