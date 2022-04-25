@@ -92,8 +92,8 @@ int main()
 	smartDatePtr->formatDate();*/
 
 	
-	Date a(01, 01, 2000);
-	Date b = a+30;
+	Date a(02, 25, 2022);
+	Date b = a+63;
 	std::cout << a << std::endl;
-	std::cout << b << std::endl;
+	b.alaverga();
 }
