@@ -61,54 +61,34 @@ public:
 			febrero();
 		}
 		else if (month == 3) {
-			if (day >= 60 && day <= 90 ) {
 				marzo();
-			}
 		}
 		else if (month == 4) {
-			if (day >= 91 && day <= 120 ) {
 				abril();
-			}
 		}
 		else if (month == 5) {
-			if (day >= 121 && day <= 151 ) {
 				mayo();
-			}
 		}
 		else if (month == 6) {
-			if (day >= 152 && day <= 181 ) {
 				junio();
-			}
 		}
-		else if (month == 7){
-			if(day >= 182 && day <= 212 ) {
+		else if (month == 7) {
 				julio();
-			}
 		}
 		else if (month == 8) {
-			if (day >= 213 && day <= 243 ) {
 				agosto();
-			}
 		}
 		else if (month == 9) {
-			if (day >= 244 && day <= 273 ) {
 				septiembre();
-			}
 		}
 		else if (month == 10) {
-			if (day >= 274 && day <= 304 ) {
 				octubre();
-			}
 		}
 		else if (month == 11) {
-			if (day >= 305 && day <= 334 ) {
 				noviembre();
-			}
 		}
 		else if (month == 12) {
-			if (day >= 334 && day <= 365 ) {
 				diciembre();
-			}
 		}
 	}
 	/*int enero = 31, febrero = 28, marzo = 31, abril = 30, mayo = 31, junio = 30, julio = 31, agosto = 31, septiembre = 30, octubre = 31, noviembre = 30, diciembre = 31;*/
@@ -117,94 +97,59 @@ public:
 		std::cout << newDate<<std::endl;
 	}
 	void febrero() {
+		std::cout << "" << std::endl;
 		int a;
-		if (day >= 1 && day <= 28) {			
+		if (day >= 1 && day <= 28) {	//febrero
 			Date newDate(month, day, year);
 			std::cout << newDate << std::endl;
+		}else if(day >= 29 && day <= 59){ //marzo
+			a = day - 28;			
+			Date newDate(month+1, a, year);
+			std::cout << newDate << std::endl;
+		}else if (day >= 60 && day <= 89) {//abril
+			a = day - 59;
+			Date newDate(month + 2, a, year);
+			std::cout << newDate << std::endl;
+		}else if (day >= 90 && day <= 120) {//mayo
+			a = day - 89;
+			Date newDate(month + 3, a, year);
+			std::cout << newDate << std::endl;
+		}else if (day >= 121 && day <= 150) {//junio
+			a = day - 120;
+			Date newDate(month + 4, a, year);
+			std::cout << newDate << std::endl;
 		}
-		else {
-			if (day > 28) {
-				a = day - 28;				
-				if (a >= 1 && a <= 31) {//marzo
-					month = 3;
-					Date newDate(month, a, year);
-					std::cout << newDate << std::endl;
-				}
-				else if (a >= 32 && a <= 91) {//abril
-					int aux;
-					aux = a - 31;
-					if (a >= 1 && a <= 30) {
-							month = 4;
-							Date newDate(month, aux, year);
-							std::cout << newDate << std::endl;
-					}
-					else if(aux >= 31 && aux <= 61){
-						aux = aux-29;
-						month = 5;
-						Date newDate(month, aux, year);
-						std::cout << newDate << std::endl;
-					}
-					else if (aux >= 62 && aux <= 92) {
-						aux = aux - 30;
-						month = 6;
-						Date newDate(month, aux, year);
-						std::cout << newDate << std::endl;
-					}
-				}
-				else if (a >= 92 && a <= 122) {//mayo
-					int aux;
-					aux = a - 91;
-					month = 5;
-					Date newDate(month, aux, year);
-					std::cout << newDate << std::endl;
-				}
-				else if (a >= 123 && a <= 152) {//junio
-					month = 6;
-					Date newDate(month, a, year);
-					std::cout << newDate << std::endl;
-				}
-				else if (a >= 153 && a <= 183) {//julio
-					month = 7 ;
-					Date newDate(month, a, year);
-					std::cout << newDate << std::endl;
-				}
-				else if (a >= 184 && a <= 214) {//agosto
-					month = 8 ;
-					Date newDate(month, a, year);
-					std::cout << newDate << std::endl;
-				}
-				else if (a >= 215 && a <= 244) {//septiembre
-					month = 9;
-					Date newDate(month, a, year);
-					std::cout << newDate << std::endl;
-				}
-				else if (a >= 245 && a <= 275) {//octubre
-					month = 10 ;
-					Date newDate(month, a, year);
-					std::cout << newDate << std::endl;
-				}
-				else if (a >= 275 && a <= 305) {//noviembre
-					month = 11;
-					Date newDate(month, a, year);
-					std::cout << newDate << std::endl;
-				}
-				else if (a >= 306 && a <= 336) {//diciembre
-					month = 12;
-					Date newDate(month, a, year);
-					std::cout << newDate << std::endl;
-				}
-				else if (a >= 337 && a <= 365) {//enero
-					month = 1;
-					Date newDate(month, a, year);
-					std::cout << newDate << std::endl;
-				}
-			}
-			else {
-				a = 28 - day;
-				month ++;
-			}
+		else if (day >= 151 && day <= 181) {//julio
+			a = day - 150;
+			Date newDate(month + 5, a, year);
+			std::cout << newDate << std::endl;
+		}else if (day >= 182 && day <= 212) {//agosto
+			a = day - 181;
+			Date newDate(month + 6, a, year);
+			std::cout << newDate << std::endl;
+		}else if (day >= 213 && day <= 242) {//septiembre
+			a = day - 212;
+			Date newDate(month + 7, a, year);
+			std::cout << newDate << std::endl;
+		}else if (day >= 243 && day <= 273) {//octubre
+			a = day - 242;
+			Date newDate(month + 8, a, year);
+			std::cout << newDate << std::endl;
+		}else if (day >= 274 && day <= 303) {//noviembre
+			a = day - 273;
+			Date newDate(month + 9, a, year);
+			std::cout << newDate << std::endl;
+		}else if (day >= 304 && day <= 334) {//diciembre
+			a = day - 303;
+			Date newDate(month + 10, a, year);
+			std::cout << newDate << std::endl;
+		}else if (day >= 335 && day <= 365) {//diciembre
+			a = day - 334;
+			month = 1;
+			Date newDate(month, a, year++);
+			std::cout << newDate << std::endl;
+		}
 
-		}
 	}
 	void marzo() {
 		int auxDay = 59 - day;

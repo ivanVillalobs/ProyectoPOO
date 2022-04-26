@@ -93,7 +93,7 @@ int main()
 
 	
 	Date a(02, 25, 2022);
-	Date b = a+63;
+	Date b = a+210;
 	std::cout << a << std::endl;
 	b.alaverga();
 }
